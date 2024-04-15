@@ -1,17 +1,17 @@
 # wedding-gifts 🎁
 
-## Descrição 📝
-O **wedding-gifts** é uma aplicação web completa com uma API, projetada para simplificar o gerenciamento de presentes de casamento. Os noivos podem facilmente adicionar presentes à lista e acompanhar quem já escolheu comprar cada item. Os convidados têm acesso a uma lista organizada de presentes, podendo escolher, comprar e pagar através de um código PIX gerado automaticamente.
+## Description 📝
+**wedding-gifts** is a comprehensive web application with an API designed to streamline wedding gift management. Couples can easily add gifts to the list and track who has chosen to purchase each item. Guests have access to an organized list of gifts, allowing them to choose, purchase, and pay via an automatically generated PIX code.
 
-## Tecnologias Utilizadas 💻
-- **Front-end**: React, TypeWriter, Criptografia MD5
+## Technologies Used 💻
+- **Front-end**: React, TypeWriter, MD5 Encryption
 - **Back-end**: Node.js, Express, PostgreSQL, PixJS, dotenv
-- **Banco de Dados**: PostgreSQL, versão-legado em MySql
+- **Database**: PostgreSQL, legacy version in MySql
 
-## Instruções de Instalação 🛠️
-1. Clone o repositório git:
+## Installation Instructions 🛠️
+1. Clone the git repository:
     ```bash
-    git clone https://github.com/seu-usuario/wedding-gifts.git
+    git clone https://github.com/your-username/wedding-gifts.git
     ```
 2. **Front-end**:
     ```bash
@@ -20,38 +20,43 @@ O **wedding-gifts** é uma aplicação web completa com uma API, projetada para 
     npm start
     ```
 3. **Back-end**:
-    - Gere um banco de dados PostgreSQL e atualize as informações no arquivo `.env` dentro da pasta `server`.
-    - Execute os scripts de criação das tabelas disponíveis no arquivo `database.js` dentro da pasta `server/api`.
+    - Generate a PostgreSQL database and update the information in the `.env` file inside the `server` folder.
+    - Run the table creation scripts available in the `database.js` file inside the `server/api` folder.
     ```bash
     cd wedding-gifts/server
     npm i
     npm start
     ```
 
-## Como Usar 🎉
-### Para Convidados 👰🤵
-1. Navegue pelo layout bonito e delicado.
-2. Analise a lista de presentes e escolha o que deseja comprar.
-3. Clique no presente escolhido para comprar.
-4. Insira seu nome para ser adicionado à lista de compradores.
-5. Realize o pagamento utilizando o código PIX gerado automaticamente.
+## How to Use 🎉
+### For Guests 👰🤵
+1. Browse the beautiful and delicate layout.
+2. Analyze the list of gifts and choose what you want to buy.
+3. Click on the chosen gift to purchase.
+4. Enter your name to be added to the list of buyers.
+5. Complete the payment using the automatically generated PIX code.
 
-### Para Noivos 👰🤵
-1. Acesse a aba /admin para adicionar novos presentes.
-2. Acompanhe a lista de compradores de cada presente.
+### For Couples 👰🤵
+1. Access the /admin tab to add new gifts.
+2. Monitor the list of buyers for each gift.
 
-## Endpoints da API 🌐
-- **/gifts**: Retorna todos os presentes cadastrados.
-- **/buyers**: Retorna os compradores de cada presente.
+## API Endpoints 🌐
+- **/gifts**: Returns all registered gifts.
+- **/buyers**: Returns the buyers for each gift.
 
-## Requisitos do Sistema 📋
-- Node.js instalado
+## Live Version 
+This project can be found at the following URLs:
+- Web app: [Netlify](https://wedding-manager.netlify.app)
+- API: [Vercel](https://wedding-gifts-seven.vercel.app)
 
-## Contribuição 🤝
-Sinta-se à vontade para contribuir com o projeto! Basta fazer um fork do repositório, implementar suas melhorias e enviar um pull request.
+## System Requirements 📋
+- Node.js installed
 
-## Licença 📜
-Este projeto está sob a licença MIT.
+## Contribution 🤝
+Feel free to contribute to the project! Just fork the repository, implement your improvements, and submit a pull request.
 
-## Contato 📞
-Para suporte ou para relatar problemas, entre em contato através do email: [hugofollogua07@gmail.com](mailto:hugofollogua07@gmail.com)
+## License 📜
+This project is under the MIT license.
+
+## Contact 📞
+For support or to report issues, please contact us via email: [hugofollogua07@gmail.com](mailto:hugofollogua07@gmail.com)
