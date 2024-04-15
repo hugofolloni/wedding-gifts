@@ -9,12 +9,14 @@ const Admin = () => {
 
     useEffect(() => {
         if(localStorage.getItem('username') === "admin" && localStorage.getItem("password") === md5("admin")){
-            fetch(`http://localhost:4000/api/admin/`)
+            fetch(`https://wedding-gifts-seven.vercel.app
+/api/admin/`)
             .then(res => res.json())
             .then(data => {
                 setBuys(data)
             })
-            fetch(`http://localhost:4000/api/gifts/`)
+            fetch(`https://wedding-gifts-seven.vercel.app
+/api/gifts/`)
             .then(res => res.json())
             .then(data => {
                 setGifts(data)
@@ -43,7 +45,8 @@ const AdminCreate = () => {
 
     const addItem = () => {
         if(itemName === "") return 
-        fetch(`http://localhost:4000/api/gifts`, { // https://wedding-api-zeta.vercel.app  --- https://wedding-api-zeta.vercel.app
+        fetch(`https://wedding-gifts-seven.vercel.app
+/api/gifts`, { // https://wedding-api-zeta.vercel.app  --- https://wedding-api-zeta.vercel.app
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
@@ -78,7 +81,8 @@ const AdminList = (props) => {
 
     const setConfirm = () => {
         console.log(watchItem.id)
-        fetch(`http://localhost:4000/api/gifts/${watchItem.id}` , {
+        fetch(`https://wedding-gifts-seven.vercel.app
+/api/gifts/${watchItem.id}` , {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -128,7 +132,8 @@ const AdminBuys = (props) => {
 
     const setConfirm = () => {
         console.log(watchItem.buy_id)
-        fetch(`http://localhost:4000/api/buyers/${watchItem.buy_id}` , {
+        fetch(`https://wedding-gifts-seven.vercel.app
+/api/buyers/${watchItem.buy_id}` , {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'

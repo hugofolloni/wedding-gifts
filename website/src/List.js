@@ -7,7 +7,7 @@ const List = () => {
     const [lista, setLista] = useState([])
     
     useEffect(() => {
-        fetch('http://localhost:4000/api/gifts')
+        fetch('https://wedding-gifts-seven.vercel.app/api/gifts')
         .then(res => res.json())
         .then(data => {console.log(data); setLista(data)})
     }, [])

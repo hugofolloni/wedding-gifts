@@ -22,7 +22,7 @@ const Item = () => {
         const id = window.location.href.split('item/')[1]
         setClickConfirm(false);
         setPixContainer(true);
-        fetch(`http://localhost:4000/api/buyer`, { // https://wedding-api-zeta.vercel.app  --- https://wedding-api-zeta.vercel.app
+        fetch(`https://wedding-gifts-seven.vercel.app/api/buyer`, { // https://wedding-api-zeta.vercel.app  --- https://wedding-api-zeta.vercel.app
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -41,7 +41,8 @@ const Item = () => {
 
     useEffect(() => {
         const id = window.location.href.split('item/')[1]
-        fetch(`http://localhost:4000/api/gifts/${id}`)
+        fetch(`https://wedding-gifts-seven.vercel.app
+/api/gifts/${id}`)
         .then(res => res.json())
         .then(data => {
             const infos = data[0]
