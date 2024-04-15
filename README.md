@@ -47,7 +47,7 @@
 ## Live Version 
 This project can be found at the following URLs:
 - Web app: [Netlify](https://wedding-manager.netlify.app)
-- API: [Vercel](https://wedding-gifts-seven.vercel.app)
+- API: [Vercel](https://wedding-gifts-seven.vercel.app/api)
 
 ## System Requirements 📋
 - Node.js installed
