@@ -4,7 +4,10 @@ const config = require('./config');
 async function connect() {
 
     const pool = new Pool({
-        connectionString: config.pool
+        connectionString: config.pool,
+        ssl: {
+          rejectUnauthorized: false
+        }
     });
  
     //apenas testando a conexão
