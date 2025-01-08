@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import Loading from "./Loading"
+import { Loading } from "./Loading"
 import md5 from 'md5';
 
 const Admin = () => {

@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
-import Loading from './Loading';
+import { Loading, Empty }  from './Loading';
 import Typewriter from "typewriter-effect";
 
 const HelpUs = () => {
 
-    const [lista, setLista] = useState([])
+    const [lista, setLista] = useState(null)
 
     useEffect(() => {
         fetch('https://wedding-gifts-seven.vercel.app/api/tobuy')
         .then(res => res.json())
-        .then(data => setLista(data))
+        .then(data => {console.log(data); setLista(data)})
     }, [])
 
 
@@ -23,15 +23,18 @@ const HelpUs = () => {
                 
             </div>
 
-            {(lista.length !== 0 && <div className="items-list">
-                {lista.slice(0, 10).map((item) => (
-                        <div className='items-each'> 
-                            <div className='image-wrapper'><img src={item.image} alt="" /></div>
-                            <p>{item.name}</p>
-                            <a href={`/item/${item.id}`} className='link-buy'>Escolher item</a>
-                        </div>
-                    ))}
-                </div>) || <Loading/>}
+            {(lista && (
+                (lista.length !== 0 && <div className="items-list">
+                    {lista.slice(0, 10).map((item) => (
+                            <div className='items-each'> 
+                                <div className='image-wrapper'><img src={item.image} alt="" /></div>
+                                <p>{item.name}</p>
+                                <a href={`/item/${item.id}`} className='link-buy'>Escolher item</a>
+                            </div>
+                        ))}
+                    </div>) 
+                    || <Empty/>)) 
+                ||  <Loading/>}
             <a className='redirect-list' href="/list" style={{marginBottom: '20px'}}>Lista Completa</a>
         </div>
      );

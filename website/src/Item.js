@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Loading from './Loading'
+import { Loading } from './Loading'
 import {QRCodeSVG} from 'qrcode.react';
 
 const Item = () => {

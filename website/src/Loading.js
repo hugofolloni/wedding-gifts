@@ -1,4 +1,4 @@
-const Loading = () => {
+export const Loading = () => {
     return (
         <div className="loading">
             Loading...
@@ -6,4 +6,10 @@ const Loading = () => {
     )
 }
  
-export default Loading;
+export const Empty = () => {
+    return (
+        <div className="loading">
+            Todos os presentes já foram comprados.
+        </div>
+    )
+}
